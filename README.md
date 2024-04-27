@@ -39,7 +39,7 @@ The latest dump should be available in the `dist/` directory of this repo.
 
 #### Dumping
 1. Download [ScriptHookV](http://www.dev-c.com/gtav/scripthookv/) and place `dinput8.dll` and `ScriptHookV.dll` in your GTAV directory.
-2. Download [the latest compiled dumper script from the Releases page]() and place GTAVClothingDumper.asi in your GTAV directory.
+2. Download [the latest compiled dumper script from the Releases page](https://github.com/tomezpl/gtav-clothing-dumper/releases/latest) and place GTAVClothingDumper.asi in your GTAV directory.
 3. Launch GTAV
 4. Load into story mode
 5. Once spawned in, press F.
