@@ -67,7 +67,8 @@
       <AdditionalLibraryDirectories>$(SCRIPTHOOKV_SDK);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) "I:\SteamLibrary\steamapps\common\Grand Theft Auto V" /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
