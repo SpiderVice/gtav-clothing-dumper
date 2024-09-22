@@ -98,8 +98,16 @@ void main()
 										// Store the component data in the data struct.
 										DLC1::GET_SHOP_PED_COMPONENT(componentHash, reinterpret_cast<Any*>(&data));
 
+										out << "\t\t\t\t\"" << j << "\": {\n";
+
 										// Write the GXT label for the current drawable texture.
-										out << "\t\t\t\t\"" << j << "\": \"" << data.gxt << "\"";
+										out << "\t\t\t\t\t\"label\": \"" << data.gxt << "\",\n";
+
+										// Write the locate value for the current drawable texture.
+										out << "\t\t\t\t\t\"locate\": \"" << data.locate << "\"\n";
+
+										out << "\t\t\t\t}";
+
 										if (j < textures - 1)
 										{
 											out << ",";

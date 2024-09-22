@@ -16,8 +16,11 @@ interface IClothingDump {
 
 type PedClothing = Record<PedComponent, ComponentDrawables>;
 type ComponentDrawables = Record<number, DrawableTextures>;
-type DrawableTextures = Record<number, GxtLabel>;
-type GxtLabel = string;
+type DrawableTextures = Record<number, ComponentData>;
+interface ComponentData {
+	label: string | '';
+	locate: `${number}` | '';
+};
 
 type PedComponent = |
 	"head" |
@@ -55,3 +58,12 @@ The latest dump should be available in the `dist/` directory of this repo.
 
 ### Thanks
 Big thanks to [Alexander Blade](http://www.dev-c.com/) for [ScriptHookV](http://www.dev-c.com/gtav/scripthookv/) and [root-cause (GitHub)](https://github.com/root-cause) for the [PedComponent struct layout](https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86).
+
+### Changelog
+- #### 3323.0
+	- Changed GxtLabel type to ComponentData type that contains both the label and the locate value
+- #### 3258.0
+	- Exported for GTA Online: Bottom Dollar Bounties DLC (#1)
+- #### 3095.0
+	- Initial build
+	- Exported for GTA Online: The Chop Shop DLC
