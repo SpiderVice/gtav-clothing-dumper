@@ -1,0 +1,112 @@
+{
+    "mp_f_freemode_01": {
+        "torso": {
+            "428": {
+                "0": {
+                    "label": "CLO_SBF_U_13_0",
+                    "locate": "232"
+                },
+                "1": {
+                    "label": "CLO_SBF_U_13_1",
+                    "locate": "232"
+                },
+                "2": {
+                    "label": "CLO_SBF_U_13_2",
+                    "locate": "232"
+                },
+                "3": {
+                    "label": "CLO_SBF_U_13_3",
+                    "locate": "232"
+                },
+                "4": {
+                    "label": "CLO_SBF_U_13_4",
+                    "locate": "232"
+                },
+                "5": {
+                    "label": "CLO_SBF_U_13_5",
+                    "locate": "232"
+                },
+                "6": {
+                    "label": "CLO_SBF_U_13_6",
+                    "locate": "232"
+                },
+                "7": {
+                    "label": "CLO_SBF_U_13_7",
+                    "locate": "232"
+                },
+                "8": {
+                    "label": "CLO_SBF_U_13_8",
+                    "locate": "232"
+                },
+                "9": {
+                    "label": "CLO_SBF_U_13_9",
+                    "locate": "232"
+                },
+                "10": {
+                    "label": "CLO_SBF_U_13_10",
+                    "locate": "232"
+                },
+                "11": {
+                    "label": "CLO_SBF_U_13_11",
+                    "locate": "232"
+                },
+                "12": {
+                    "label": "CLO_SBF_U_13_12",
+                    "locate": "232"
+                },
+                "13": {
+                    "label": "CLO_SBF_U_13_13",
+                    "locate": "232"
+                },
+                "14": {
+                    "label": "CLO_SBF_U_13_14",
+                    "locate": "232"
+                },
+                "15": {
+                    "label": "CLO_SBF_U_13_15",
+                    "locate": "232"
+                },
+                "16": {
+                    "label": "CLO_SBF_U_13_16",
+                    "locate": "232"
+                },
+                "17": {
+                    "label": "CLO_SBF_U_13_17",
+                    "locate": "232"
+                },
+                "18": {
+                    "label": "CLO_SBF_U_13_18",
+                    "locate": "232"
+                },
+                "19": {
+                    "label": "CLO_SBF_U_13_19",
+                    "locate": "232"
+                },
+                "20": {
+                    "label": "CLO_SBF_U_13_20",
+                    "locate": "232"
+                },
+                "21": {
+                    "label": "CLO_SBF_U_13_21",
+                    "locate": "232"
+                },
+                "22": {
+                    "label": "CLO_SBF_U_13_22",
+                    "locate": "232"
+                },
+                "23": {
+                    "label": "CLO_SBF_U_13_23",
+                    "locate": "232"
+                },
+                "24": {
+                    "label": "CLO_SBF_U_13_24",
+                    "locate": "232"
+                },
+                "25": {
+                    "label": "CLO_SBF_U_13_25",
+                    "locate": "232"
+                }
+            }
+        }
+    }
+}
