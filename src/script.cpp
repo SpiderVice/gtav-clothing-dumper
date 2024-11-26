@@ -17,7 +17,21 @@ const char* pedComponents[] =
 	"accessories",
 	"armour",
 	"badge",
-	"torso"
+	"torso",
+
+	"p_head",
+	"p_eyes",
+	"p_ears",
+	"p_mouth",
+	"p_lhand",
+	"p_rhand",
+	"p_lwrist",
+	"p_rwrist",
+	"p_lhip",
+	"p_lfoot",
+	"p_rfoot",
+	"ph_lhand",
+	"ph_rhand"
 };
 
 // MP ped names
@@ -67,10 +81,21 @@ void main()
 							out << "\t\"" << mpPeds[pedIndex] << "\": {\n";
 
 							// Dump all drawable&texture variations of all components.
-							for (int comp = 0; comp < 12; comp++)
+							for (int comp = 0; comp < 25; comp++)
 							{
+								bool isProp = comp >= 12;
+
+								int prop = -1;
+
+								if (isProp)
+								{
+									prop = comp - 12;
+								}
+
 								// Get the number of drawables for the current component.
-								int drawables = PED::GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS(PLAYER::PLAYER_PED_ID(), comp);
+								int drawables = !isProp 
+									? PED::GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS(PLAYER::PLAYER_PED_ID(), comp)
+									: PED::GET_NUMBER_OF_PED_PROP_DRAWABLE_VARIATIONS(PLAYER::PLAYER_PED_ID(), prop);
 
 								// Start a JSON object entry using the component name as the key.
 								// The object's entries will be indexed by drawable index,
@@ -83,7 +108,9 @@ void main()
 									out << "\t\t\t\"" << i << "\": {\n";
 
 									// Get the number of texture variations of this drawable.
-									int textures = PED::GET_NUMBER_OF_PED_TEXTURE_VARIATIONS(PLAYER::PLAYER_PED_ID(), comp, i);
+									int textures = !isProp 
+										? PED::GET_NUMBER_OF_PED_TEXTURE_VARIATIONS(PLAYER::PLAYER_PED_ID(), comp, i)
+										: PED::GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS(PLAYER::PLAYER_PED_ID(), prop, i);
 									
 									// Dump GXT labels for all of this drawable's textures.
 									for (int j = 0; j < textures; j++)
@@ -93,10 +120,15 @@ void main()
 										ZeroMemory(&data, sizeof(PedComponent));
 
 										// Get the component hash based on the drawable & texture combination.
-										Hash componentHash = DLC1::GET_HASH_NAME_FOR_COMPONENT(PLAYER::PLAYER_PED_ID(), comp, i, j);
+										Hash componentHash = !isProp 
+											? DLC1::GET_HASH_NAME_FOR_COMPONENT(PLAYER::PLAYER_PED_ID(), comp, i, j)
+											: DLC1::GET_HASH_NAME_FOR_PROP(PLAYER::PLAYER_PED_ID(), prop, i, j);
 										
 										// Store the component data in the data struct.
-										DLC1::GET_SHOP_PED_COMPONENT(componentHash, reinterpret_cast<Any*>(&data));
+										!isProp
+											? DLC1::GET_SHOP_PED_COMPONENT(componentHash, reinterpret_cast<Any*>(&data))
+											// GET_SHOP_PED_PROP
+											: DLC1::_0x5D5CAFF661DDF6FC(componentHash, reinterpret_cast<Any*>(&data));
 
 										out << "\t\t\t\t\"" << j << "\": {\n";
 
@@ -129,7 +161,7 @@ void main()
 
 								// Close the current component's JSON object.
 								out << "\t\t}";
-								if (comp < 11)
+								if (prop < 12)
 								{
 									out << ",";
 								}

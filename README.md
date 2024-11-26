@@ -14,7 +14,7 @@ interface IClothingDump {
 	"mp_m_freemode_01": PedClothing;
 }
 
-type PedClothing = Record<PedComponent, ComponentDrawables>;
+type PedClothing = Record<PedComponent | PedProp, ComponentDrawables>;
 type ComponentDrawables = Record<number, DrawableTextures>;
 type DrawableTextures = Record<number, ComponentData>;
 interface ComponentData {
@@ -35,6 +35,21 @@ type PedComponent = |
 	"armour" |
 	"badge" |
 	"torso";
+
+type PedProp = |
+	"p_head" |
+	"p_eyes" |
+	"p_ears" |
+	"p_mouth" |
+	"p_lhand" |
+	"p_rhand" |
+	"p_lwrist" |
+	"p_rwrist" |
+	"p_lhip" |
+	"p_lfoot" |
+	"p_rfoot" |
+	"ph_lhand" |
+	"ph_rhand";
 ```
 
 ### Installation & usage
