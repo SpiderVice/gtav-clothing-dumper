@@ -76,8 +76,8 @@ Big thanks to [Alexander Blade](http://www.dev-c.com/) for [ScriptHookV](http://
 
 ### Changelog
 - #### 3351.0
-        - Included 13 prop slots from GTAV in the clothes dump. (#6)
-  	- Added a patch script and exported a patched version of the dump to fix item-specific issues. (#4)
+  - Included 13 prop slots from GTAV in the clothes dump. (#6)
+  - Added a patch script and exported a patched version of the dump to fix item-specific issues. (#4)
 - #### 3323.0
 	- Changed GxtLabel type to ComponentData type that contains both the label and the locate value. (#2)
 - #### 3258.0
