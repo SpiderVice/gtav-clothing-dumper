@@ -75,8 +75,11 @@ The latest dump should be available in the `dist/` directory of this repo.
 Big thanks to [Alexander Blade](http://www.dev-c.com/) for [ScriptHookV](http://www.dev-c.com/gtav/scripthookv/) and [root-cause (GitHub)](https://github.com/root-cause) for the [PedComponent struct layout](https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86).
 
 ### Changelog
+- #### 3351.0
+        - Included 13 prop slots from GTAV in the clothes dump. (#6)
+  	- Added a patch script and exported a patched version of the dump to fix item-specific issues. (#4)
 - #### 3323.0
-	- Changed GxtLabel type to ComponentData type that contains both the label and the locate value
+	- Changed GxtLabel type to ComponentData type that contains both the label and the locate value. (#2)
 - #### 3258.0
 	- Exported for GTA Online: Bottom Dollar Bounties DLC (#1)
 - #### 3095.0
